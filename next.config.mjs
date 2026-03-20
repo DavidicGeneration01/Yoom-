@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // your existing config options here
+  transpilePackages: [
+    '@stream-io/video-react-sdk',
+    '@stream-io/video-filters-web',
+    '@stream-io/node-sdk',
+  ],
+  experimental: {
+    esmExternals: 'loose',
+  },
 };
 
 export default nextConfig;
